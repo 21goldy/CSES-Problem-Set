@@ -1,0 +1,27 @@
+x = input()
+
+l = len(x)
+count = 0
+
+x += '0'
+
+i = 0
+temp = 0
+
+stop = False
+while not stop:
+    if x[i] == '0':
+        break
+
+    if x[i] == x[i+1]:
+        temp += 1
+        i += 1
+    
+    if temp > count: 
+        count = temp
+    
+    if x[i] != x[i+1]:
+        temp = 0
+        i += 1
+        
+print(count+1)

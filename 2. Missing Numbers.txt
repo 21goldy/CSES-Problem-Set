@@ -1,0 +1,17 @@
+n = int(input())
+arr = list(map(int, input().split()))
+
+arr.sort()
+
+if 1 not in arr:
+    print(1)
+
+elif n not in arr:
+    print(n)
+
+else:
+    for i in range(n - 1):
+        if i + 1 != n - 1:
+            if arr[i] + 1 != arr[i + 1]:
+                print(arr[i] + 1)
+                break
